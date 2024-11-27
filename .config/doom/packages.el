@@ -1,0 +1,1 @@
+/gnu/store/v1nqa92w7cg59qparmgjw2byzy7prcsw-home-dotfiles--config-doom-packages-el

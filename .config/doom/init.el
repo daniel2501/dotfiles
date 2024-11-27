@@ -1,0 +1,1 @@
+/gnu/store/q5vjr9xl1pq2m08sr00hflw073hz3jz7-home-dotfiles--config-doom-init-el

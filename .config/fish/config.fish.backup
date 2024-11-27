@@ -1,0 +1,8 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+
+set -U pure_show_jobs true
+fish_add_path $HOME/.config/emacs/bin
+set -U fish_greeting "☭ Welcome to $hostname, Comrade. ☭"
+doom sync
