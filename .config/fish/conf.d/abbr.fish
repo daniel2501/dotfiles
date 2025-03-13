@@ -1,1 +1,7 @@
-abbr ll "ls -lah"
+abbr l	"eza --icons"
+abbr ll	"eza --icons -a --group --header --group-directories-first --long"
+abbr lg	"eza --icons -a --group --header --group-directories-first --long --git --git-ignore"
+abbr le	"eza --icons -a --group --header --group-directories-first --long --extended"
+abbr lt	"eza --icons -a --group --header --group-directories-first --tree --level 2"
+abbr lc	"eza --icons -a --group --header --group-directories-first --across"
+abbr lo	"eza --icons -a --group --header --group-directories-first --oneline"
