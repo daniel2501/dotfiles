@@ -219,9 +219,10 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    # status_command while date +☭☭☭\ \ \ ' [🔋'$(cat /sys/class/power_supply/BAT0/capacity)%' '$(cat /sys/class/power_supply/BAT0/status)]'   ☭   [%a %Y-%m-%d]   ☭   [%I:%M:%S%p]   ☭☭☭'; do sleep 1; done
-    status_command while date +"☭       BRT: $(export blb=$(cat /sys/class/backlight/acpi_video0/brightness) && awk -v blb=$blb 'BEGIN { printf\"%.0f%\", (blb / 19*100) }')  |  BAT0: $(cat /sys/class/power_supply/BAT0/capacity)%%  $(cat /sys/class/power_supply/BAT0/status)  |  %Y-%m-%d %I:%M:%S %p"; do sleep 1; done
-    font "NotoMono Nerd Font Light 12"
+    # The value 96000 below is obtained in this case from /sys/class/backlight/intel_backlight/max_brightness
+    status_command while date +"[ 󱢇 ]    [ $(cat /sys/class/power_supply/BAT0/capacity)% $(cat /sys/class/power_supply/BAT0/status)]   ☭   [󰃝 $(export blb=$(cat /sys/class/backlight/intel_backlight/actual_brightness) && awk -v blb=$blb 'BEGIN { printf\"%.0f%\", (blb / 96000*100) }')]   ☭   [%a %Y-%m-%d]   ☭   [%I:%M:%S%p]   [ 󱢇 ] "; do sleep 1; done
+    # status_command while date +"☭       BRT: $(export blb=$(cat /sys/class/backlight/acpi_video0/brightness) && awk -v blb=$blb 'BEGIN { printf\"%.0f%\", (blb / 19*100) }')  |  BAT0: $(cat /sys/class/power_supply/BAT0/capacity)%%  $(cat /sys/class/power_supply/BAT0/status)  |  %Y-%m-%d %I:%M:%S %p"; do sleep 1; done
+    font "NotoMono Nerd Font Bold 14"
 
     colors {
         statusline #ff4500

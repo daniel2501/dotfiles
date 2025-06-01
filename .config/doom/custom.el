@@ -1,1 +1,0 @@
-/gnu/store/pvc1rh38f5p938mn27nnx4sma8rlavbv-home-dotfiles--config-doom-custom-el
